@@ -5,7 +5,6 @@
 ** str_to_str_array.c
 */
 
-#include <stdio.h>
 #include <stdlib.h>
 
 int find_step(char *str, char sep)

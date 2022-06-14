@@ -6,6 +6,7 @@
 */
 
 #include "prototypes.h"
+#include "my.h"
 
 void printmap(char **map)
 {

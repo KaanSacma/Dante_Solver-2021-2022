@@ -10,8 +10,8 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>
-#include "struct.h"
 #include "prototypes.h"
+#include "my.h"
 
 int valid_char(char c)
 {

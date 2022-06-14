@@ -1,16 +1,14 @@
 /*
-** EPITECH PROJECT, 2022
-** my_putstr.c
+** EPITECH PROJECT, 2021
+** putstr
 ** File description:
-** my_putstr
+** my_putstr.c
 */
 
-void my_putchar(char c);
+#include "my.h"
 
-int my_putstr(char const *str)
+void my_putstr(char *str)
 {
-    for (int i = 0; str[i] != '\0'; i += 1) {
+    for (int i = 0; str[i] != '\0'; i += 1)
         my_putchar(str[i]);
-    }
-    return (0);
 }

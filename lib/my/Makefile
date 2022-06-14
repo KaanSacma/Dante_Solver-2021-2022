@@ -1,51 +1,31 @@
 ##
-## EPITECH PROJECT, 2022
-## makefile
+## EPITECH PROJECT, 2021
+## MakeFile
 ## File description:
-## makefile
+## make
 ##
 
-CC =	gcc
+SRC =	my_putchar.c \
+		my_putstr.c \
+		str_to_str_array.c
 
-AR =	ar rc
+OBJS = $(SRC:.c=.o)
 
-SRC =	my_putstr.c 	\
-		my_strlen.c 	\
-		my_putchar.c 	\
-		my_tablen.c		\
-		my_tabdup.c		\
-		free_tab.c		\
-		print_tab.c		\
-		my_strcpy.c		\
-		my_strdup.c 	\
-		my_strncmp.c 	\
-		my_strcmp.c		\
-		str_to_array.c 	\
-		my_concat.c 	\
-		my_cleanstr.c 	\
-		my_getnbr.c		\
-		my_strcat.c
+CFLAGS = -W -Wall -Wextra -g
 
-FILE =	my.h
+NAME = libmy.a
 
-CFLAGS += -W -Wall -Werror -Wextra -g
+all: 	$(NAME)
 
-OBJ =	$(SRC:.c=.o)
-
-NAME =	libmy.a
-
-$(NAME):	$(OBJ)
-	$(AR) -o $(NAME) $(OBJ)
-	cp $(NAME) ../
-	cp $(FILE) ../../include/
-
-all:	$(NAME)
+$(NAME): $(OBJS)
+	ar rc $(NAME) $(OBJS)
+	cp $(NAME) ../../include
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJS)
 
-fclean:	clean
+fclean: clean
 	rm -f $(NAME)
-	rm -f ../$(NAME)
+	rm -f ../../include/$(NAME)
 
-re:	fclean all
+re: fclean all

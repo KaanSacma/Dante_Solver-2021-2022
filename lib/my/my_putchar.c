@@ -1,8 +1,8 @@
 /*
-** EPITECH PROJECT, 2022
-** my_putchar.c
+** EPITECH PROJECT, 2021
+** putchar
 ** File description:
-** my_putchar
+** my_putchar.c
 */
 
 #include <unistd.h>
